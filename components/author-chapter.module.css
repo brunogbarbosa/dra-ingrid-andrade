@@ -785,3 +785,67 @@
   .closingSeal { display: none; }
   .closingNote { font-size: 13px; line-height: 1.5; padding: 0; }
 }
+
+/* Open editorial chapter: all existing copy sits directly on the paper. */
+.root { background: #fcfaf7; color: #28231f; padding: 78px 7% 70px; }
+.topline { width: 100%; max-width: 1320px; min-height: 0; padding: 0 0 30px; border-bottom: 1px solid #756a5c65; }
+.topline p { font-size: 12px; letter-spacing: .18em; }
+.topline p:last-child { color: #756a5c; font-size: 11px; letter-spacing: .11em; }
+.topline > span { background: none; }
+.stage { width: 100%; max-width: 1320px; height: auto; min-height: 0; margin: 48px auto 0; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); grid-template-rows: auto auto auto; gap: 26px 8%; }
+.copy { position: relative; inset: auto; grid-column: 1; grid-row: 1; width: 100%; padding: 0; }
+.copy h2 { font-size: clamp(64px,6.1vw,104px); line-height: 1.02; color: #28231f; }
+.titleMask > * { white-space: normal; }
+.titleMask em { color: #28231f; }
+.subcopy { color: #776e63; font-size: clamp(22px,2vw,29px); font-style: italic; line-height: 1.6; margin-top: 25px; letter-spacing: -.015em; }
+.photo { position: relative; inset: auto; grid-column: 2; grid-row: 1 / 4; align-self: start; width: 100%; height: auto; min-height: 0; aspect-ratio: 1192 / 1600; margin: 0; border-radius: 0; box-shadow: none; background: #eee6db; }
+.photo img { object-fit: contain; object-position: center; }
+.card { position: relative; inset: auto; grid-column: 1; grid-row: 2; width: 100%; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.cardLabel { font-size: 12px; line-height: 1.6; color: #756a5c; letter-spacing: .18em; }
+.cardCopy { font-size: 18px; line-height: 1.9; color: #71685e; margin: 22px 0 24px; max-width: 530px; letter-spacing: 0; }
+.cta { width: fit-content; min-height: 44px; justify-content: flex-start; gap: 13px; font-size: 20px; line-height: 1.5; border-bottom: 1px solid #28231f; }
+.cta > span:first-child { background: none; padding: 0; }
+.ctaCircle { width: 28px; height: 28px; border: 0; border-radius: 0; background: none; color: #28231f; }
+.cta:hover .ctaCircle, .cta:focus-visible .ctaCircle { background: none; color: #28231f; transform: none; }
+.sideNote { position: relative; inset: auto; grid-column: 1; grid-row: 3; display: block; margin: 4px 0 0; color: #756a5c; }
+.sideNote span { writing-mode: horizontal-tb; transform: none; font-size: 11px; letter-spacing: .13em; line-height: 1.7; }
+.sideNote i, .sideNote b, .thread, .threadMobile, .threadDesktop { display: none; }
+.closing { width: 100%; max-width: 1320px; min-height: 0; margin: 72px auto 0; padding: 34px 0 0; border-top: 1px solid #756a5c65; }
+.closingEyebrow { display: block; font-size: 12px; letter-spacing: .16em; color: #756a5c; margin-bottom: 28px; text-align: center; line-height: 1.7; }
+.closingEyebrow span, .closingMonogram, .closingSeal { display: none; }
+.closingRow { display: block; }
+.closingStatement { display: block; font-size: clamp(31px,3.2vw,52px); line-height: 1.22; text-align: center; white-space: normal; padding: 0; }
+.closingStatement > * { width: auto; }
+.closingStatement em { color: #28231f; margin-top: 4px; }
+.closingNote { color: #756a5c; font-size: 14px; letter-spacing: .03em; line-height: 1.8; margin-top: 23px; padding: 0; text-align: center; }
+@media (min-width: 701px) and (max-width: 1100px) {
+  .root { padding: 64px 6% 56px; }
+  .stage { gap: 25px 6%; height: auto; }
+  .copy h2 { font-size: 6.6vw; }
+  .cardCopy { font-size: 17px; }
+}
+@media (max-width: 700px) {
+  .root { padding: 52px 6% 50px; background: #fcfaf7; }
+  .topline { width: 100%; padding: 0 0 24px; gap: 15px; }
+  .topline p { font-size: 11px; letter-spacing: .12em; }
+  .topline p:last-child { font-size: 10px; letter-spacing: .06em; max-width: 125px; }
+  .stage { display: flex; flex-direction: column; gap: 0; width: 100%; height: auto; margin-top: 34px; padding-top: 0; }
+  .copy { position: relative; inset: auto; width: 100%; }
+  .copy h2 { font-size: 13.2vw; line-height: 1.03; }
+  .titleMask:nth-child(1) > span, .titleMask:nth-child(2) > span { font-size: 1em; }
+  .subcopy { font-size: 22px; line-height: 1.6; margin-top: 26px; }
+  .card { order: 1; width: 100%; inset: auto; margin: 34px 0 0; min-height: 0; padding: 0; }
+  .cardLabel { font-size: 12px; }
+  .cardCopy { font-size: 17px; line-height: 1.9; margin: 22px 0 23px; max-width: none; }
+  .cta { width: fit-content; font-size: 19px; gap: 12px; white-space: normal; }
+  .ctaCircle { width: 28px; height: 28px; }
+  .photo { order: 2; position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 1192 / 1600; margin: 42px 0 0; border-radius: 0; box-shadow: none; }
+  .photo img { object-position: center; }
+  .sideNote { order: 3; display: block; margin-top: 20px; }
+  .sideNote span { font-size: 11px; }
+  .closing { margin-top: 44px; padding-top: 31px; }
+  .closingEyebrow { display: block; font-size: 11px; letter-spacing: .11em; margin-bottom: 24px; }
+  .closingStatement { font-size: 8vw; line-height: 1.23; white-space: normal; padding: 0; text-align: left; }
+  .closingStatement > * { width: auto; }
+  .closingNote { font-size: 14px; line-height: 1.8; padding: 0; text-align: left; margin-top: 22px; }
+}
